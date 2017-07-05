@@ -11,7 +11,6 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.core.MediaType;
 
 @Path("/UserService") 
-
 public class UserService {  
 	 UserDao userDao = new UserDao();
 	 private static final String SUCCESS_RESULT="success";
