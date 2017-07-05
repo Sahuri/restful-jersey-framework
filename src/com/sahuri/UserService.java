@@ -1,10 +1,14 @@
 package com.sahuri;
 
 import java.util.List;
+
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.core.MediaType;
 
 @Path("/UserService") 
@@ -21,16 +25,18 @@ public class UserService {
       return userDao.getAllUsers(); 
    }  
    
-   @POST
+   @GET
    @Path("/get")
    @Produces(MediaType.APPLICATION_JSON)
+   @Consumes(MediaType.APPLICATION_JSON)
    public User getUser(User user){
       return userDao.getUser(user.getId());
    }
 
-   @POST
-   @Path("/new")
-   @Produces(MediaType.APPLICATION_JSON)
+   @PUT
+   @Path("/put")
+   @Produces(MediaType.TEXT_PLAIN)
+   @Consumes(MediaType.APPLICATION_JSON)
    public String createUser(User user) {
       int result = userDao.addUser(user);
       if(result == 1){
@@ -41,7 +47,8 @@ public class UserService {
    
    @POST
    @Path("/update")
-   @Produces(MediaType.APPLICATION_JSON)
+   @Produces(MediaType.TEXT_PLAIN)
+   @Consumes(MediaType.APPLICATION_JSON)
    public String updateUser(User user){
       int result = userDao.updateUser(user);
       if(result == 1){
@@ -50,9 +57,10 @@ public class UserService {
       return FAILURE_RESULT;
    }
 
-   @POST
+   @DELETE
    @Path("/delete")
-   @Produces(MediaType.APPLICATION_JSON)
+   @Produces(MediaType.TEXT_PLAIN)
+   @Consumes(MediaType.APPLICATION_JSON)
    public String deleteUser(User user){
       int result = userDao.deleteUser(user.getId());
       if(result == 1){
