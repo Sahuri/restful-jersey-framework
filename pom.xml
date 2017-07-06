@@ -20,6 +20,12 @@
                     <webXml>WebContent\WEB-INF\web.xml</webXml>
                 </configuration>
     	</plugin>
+    	<plugin>
+    		<groupId>com.github.eirslett</groupId>
+    		<artifactId>frontend-maven-plugin</artifactId>
+    		<version>1.4</version>
+    		  
+    	</plugin>
     </plugins>
   </build>
   <dependencies>

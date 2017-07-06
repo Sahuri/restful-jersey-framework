@@ -1,0 +1,18 @@
+{
+  "name": "Web01",
+  "private": true,
+  "homepage": "https://github.com/Sahuri/restful-jersey-framework",
+  "authors": [
+    "Sahuri <huriezu21@gmail.com>"
+  ],
+  "description": "RESTful jersey-framework in Java simply",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
