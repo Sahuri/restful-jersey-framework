@@ -14,8 +14,17 @@
 <link href="assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
 
 <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/core/service.js"></script>
+<script src="js/core/dataService.js"></script>
+<script src="js/core/_.js"></script>
+
 <script src="js/app.js"></script>
 <script src="js/controllers/main.js"></script>
+<script src="js/controllers/list-user.js"></script>
 
 </head>
 <body class="theme-default main-menu-animated">
@@ -522,14 +531,7 @@
 <!-- /4. $MAIN_MENU -->
 
 	<div id="content-wrapper" ng-controller="mainController as vm">
-		<ul class="breadcrumb breadcrumb-page">
-			<div class="breadcrumb-label text-light-gray">You are here: </div>
-			<li><a href="#">Home</a></li>
-			<li class="active"><a href="#">Dashboard</a></li>
-		</ul>
-		
 		  <div ui-view></div>
-
 	<div id="main-menu-bg"></div>
 </div> <!-- / #main-wrapper -->
 
